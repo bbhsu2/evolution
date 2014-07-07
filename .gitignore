@@ -1,0 +1,12 @@
+packages/
+*/bin
+*/obj
+*/gen
+*/AppPackages
+*/BundleArtifacts
+*/Package.StoreAssociation.xml
+
+*.suo
+*.DS_Store
+*.userprefs
+
