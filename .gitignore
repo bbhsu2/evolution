@@ -1,10 +1,14 @@
 packages/
-*/bin
-*/obj
-*/gen
+*/*/bin
+*/*/obj
+*/*/gen
 */AppPackages
 */BundleArtifacts
 */Package.StoreAssociation.xml
+*/*/*/bin
+*/*/*/obj
+*/*/*/gen
+*/*/*.userprefs
 
 *.suo
 *.DS_Store
