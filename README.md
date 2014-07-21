@@ -9,6 +9,13 @@ The iOS F# version is featured from the blog post titled: [Genetics, Evolution o
 
 Please note the algorithm contained in the F# version is markedly different than in C#.  Please see the blog post.
 
+The Android version is written in Java using Eclipse.  
+
+C# iOS and Java Android are published in the stores.  More scenarios to come!
+[<img src="https://raw.github.com/bbhsu2/evolution/master/assets/appStoreBadge.png">](http://bit.ly/EvolutioniPhone)
+[<img src="https://raw.github.com/bbhsu2/evolution/master/assets/googlePlayBadge.png">](http://bit.ly/EvolutionAndroid)
+
+
 ##Enjoy!
 
 &copy; 2014 All Good People LLC

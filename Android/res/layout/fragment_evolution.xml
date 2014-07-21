@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/top_evolution_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/evolution_generation_textview"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:text="Generation: 1" />
+
+            <TextView
+                android:id="@+id/evolution_population_textview"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:text="Population: 1" />
+
+            <View
+                android:id="@+id/evolution_target_view"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/evolution_colorpicker_button"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:text="Pick Color" />
+
+        <Button
+            android:id="@+id/evolution_start_button"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="right"
+            android:text="Start" />
+    </LinearLayout>
+
+</LinearLayout>

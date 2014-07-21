@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Evolutionp</string>
+    <string name="title_activity_main">Evolution and Artificial Life</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>
