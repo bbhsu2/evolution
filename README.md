@@ -18,5 +18,6 @@ C# iOS and Java Android are published in the stores.  More scenarios to come!
 
 
 ##Enjoy!
+Bernard was here
 
 &copy; 2014 All Good People LLC
