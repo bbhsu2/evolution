@@ -4,14 +4,11 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
-import android.os.Handler;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Button;
 
 import com.allgoodpeopleus.evolution.MainActivity;
-
-import evolution.shared.Utils;
 
 public class EvolutionView extends View {
 	int viewWidth = 64;

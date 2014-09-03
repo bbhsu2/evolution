@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="DullPeach">#F2D4B9</color>
+    <color name="Peach">#FBE6D3</color>
+    <color name="LightGreen">#8EEC66</color>
+    <color name="DarkGreen">#0A9B05</color>
+    <color name="LightRed">#FA4646</color>
+    <color name="DarkRed">#A11F35</color>
+    <color name="White">#FFFFFF</color>
+    <color name="Black">#000000</color>
+    <color name="LightBrown">#F7C563</color>
+    <color name="Purple">#B455B6</color>
+</resources>

@@ -4,10 +4,16 @@ import com.allgoodpeopleus.evolution.EvolutionModel;
 
 public class Utils {
 
+	public static boolean nearlyEqual(double a, double b) {
+		final double epsilon = 1e-7;
+	    return Math.abs(a - b) < epsilon;
+	}
+	
     public static Color GetRandomColor()
     {
         return Color.FromHex((int)(EvolutionModel.rnd.nextDouble() * 0xFFFFFF) << 0);
     }
+    
     public static void Mutate(Color citizen)
     {
         char[] s = citizen.binVal.toCharArray();

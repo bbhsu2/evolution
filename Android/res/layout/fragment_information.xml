@@ -2,7 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" 
+    android:background="@color/Peach">
+
+    <views.AdView
+        android:layout_width="fill_parent"
+        android:layout_height="50dp" />
+
+    <TextView
+        android:id="@+id/fragment_information_textview"
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:gravity="center"
+        android:paddingLeft="50px"
+        android:paddingRight="50px"
+        android:text="test text that is here for some kicks"
+        android:textSize="28dp" />
 
     <ListView
         android:id="@android:id/list"

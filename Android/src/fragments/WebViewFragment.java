@@ -8,10 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
-import android.webkit.WebViewClient;
 
 public class WebViewFragment extends Fragment {
 	WebView wv;
+	String url;
+	
+	public WebViewFragment(String url){
+		this.url = url;
+	}
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -29,7 +33,6 @@ public class WebViewFragment extends Fragment {
 		super.onViewCreated(view, savedInstanceState);
 		wv = (WebView)getView().findViewById(R.id.webview);
 		wv.getSettings().setJavaScriptEnabled(true);
-		wv.setWebViewClient(new WebViewClient());
-		wv.loadUrl("http://letsthinkabout.us/post/genetics-and-evolution-of-color-in-c-xamarin-ios");
+		wv.loadUrl(url);
 	}
 }

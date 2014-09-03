@@ -7,6 +7,8 @@ The iOS C# version is featured code from the blog post titled: [Genetics and Evo
 
 The iOS F# version is featured from the blog post titled: [Genetics, Evolution of Color, and the French Revolution in F# Xamarin iOS](http://www.letsthinkabout.us/post/genetics-evolution-of-color-and-the-french-revolution-in-f-xamarin-ios)
 
+Conway's Game of Life is featured code from the blog post titled: [Android Game of Life](http://www.letsthinkabout.us/post/android-game-of-life)
+
 Please note the algorithm contained in the F# version is markedly different than in C#.  Please see the blog post.
 
 The Android version is written in Java using Eclipse.  

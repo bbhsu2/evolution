@@ -7,14 +7,14 @@ import android.os.Parcelable;
 import android.preference.Preference;
 import android.util.AttributeSet;
 import android.view.View;
-
 import yuku.ambilwarna.AmbilWarnaDialog;
 import yuku.ambilwarna.R;
 
 public class AmbilWarnaPreference extends Preference {
+	
 	private final boolean supportsAlpha;
 	int value;
-
+	
 	public AmbilWarnaPreference(Context context, AttributeSet attrs) {
 		super(context, attrs);
 

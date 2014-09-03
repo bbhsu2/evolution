@@ -11,16 +11,21 @@ import android.util.DisplayMetrics;
 
 import com.allgoodpeopleus.evolutionp.R;
 
+import fragments.BoidsFragment;
 import fragments.EvolutionFragment;
+import fragments.GameOfLifeFragment;
 import fragments.HomeFragment;
 import fragments.InformationFragment;
 import fragments.WebViewFragment;
 
 public class MainActivity extends Activity {
 	public static MainActivity Shared;
-	int baseFragment;
 	public static EvolutionModel evolutionModel = new EvolutionModel();
+	public static GameOfLifeModel gameOfLifeModel = new GameOfLifeModel(40, 40);
+
+	int baseFragment;
 	FragmentManager fragmentManager;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		Shared = this;
@@ -28,60 +33,69 @@ public class MainActivity extends Activity {
 		getWindowManager().getDefaultDisplay().getMetrics(metrics);
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
+
 		fragmentManager = getFragmentManager();
 
-		if(fragmentManager.getBackStackEntryCount() ==0 ){
+		if (fragmentManager.getBackStackEntryCount() == 0) {
 			HomeFragment homeFragment = new HomeFragment();
 			baseFragment = homeFragment.getId();
 			SwitchScreens(homeFragment, true, true);
 		}
 	}
-	
+
+	//TODO: implement this!
 	void GetAnimationsForFragment(Fragment fragment, List<Integer> anims) {
 		anims.set(0, R.anim.enter);
 		anims.set(1, R.anim.exit);
-		
-		switch(fragment.getClass().getName()){
-		case "HomeFragment":
-			break;
-		case "EvolutionFragment":
-			break;
+
+		switch (fragment.getClass().getName()) {
+			case "HomeFragment":
+				break;
+			case "EvolutionFragment":
+				break;
+			default:
+				break;
 		}
 	}
-	
-	public int SwitchScreens(Fragment fragment, Boolean animated, Boolean isRoot){
+
+	public int SwitchScreens(Fragment fragment, Boolean animated, Boolean isRoot) {
 		FragmentTransaction transaction = fragmentManager.beginTransaction();
-		
-		if(animated){
+
+		if (animated) {
 			transaction.setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.detail_in, R.anim.detail_out);
 		}
 		transaction.replace(R.id.contentArea, fragment);
-		if(!isRoot)
+		if (!isRoot)
 			transaction.addToBackStack(null);
-		
+
 		return transaction.commit();
 	}
-	
-	public void showInformation(){
-		InformationFragment iFragment = new InformationFragment();
+
+	public void showInformation(String simulationInformation, Runnable[] navigations) {
+		InformationFragment iFragment = new InformationFragment(simulationInformation, navigations);
 		SwitchScreens(iFragment, true, false);
 	}
-	
-	public void ShowGAColor(){
+
+	public void ShowGAColor() {
 		EvolutionFragment evFragment = new EvolutionFragment();
 		baseFragment = evFragment.getId();
 		SwitchScreens(evFragment, true, false);
 	}
-	
-	public void showBlogPost(){
-		WebViewFragment wvFragment = new WebViewFragment();
-		SwitchScreens(wvFragment, true, false);
+
+	public void ShowGameOfLife() {
+		GameOfLifeFragment golFragment = new GameOfLifeFragment();
+		baseFragment = golFragment.getId();
+		SwitchScreens(golFragment, true, false);
 	}
 	
-	@Override
-	public void onBackPressed() {
-		super.onBackPressed();
-		overridePendingTransition(R.anim.enter, R.anim.exit);
+	public void ShowBoids(){
+		BoidsFragment boidsFragment = new BoidsFragment();
+		baseFragment = boidsFragment.getId();
+		SwitchScreens(boidsFragment, true, false);
+	}
+
+	public void showBlogPost(String url) {
+		WebViewFragment wvFragment = new WebViewFragment(url);
+		SwitchScreens(wvFragment, true, false);
 	}
 }

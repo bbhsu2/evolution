@@ -15,7 +15,9 @@ public class EvolutionModel {
     public static final double GA_MUTATIONRATE = 0.25;
     public static final Random rnd = new Random();
     public static Color GA_TARGET = Color.Purple;
+    
     public static final String Information = "This is a genetic algorithm that evolves color based on population.  By randomly mating and mutating colors, your device figures out the target, to converge on a solution!";
+    public static final String BlogUrl = "http://letsthinkabout.us/post/genetics-and-evolution-of-color-in-c-xamarin-ios";
 
     public List<Color> ParentColors;
     public List<Color> ChildColors;
